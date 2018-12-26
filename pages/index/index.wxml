@@ -1,0 +1,121 @@
+<!--index.wxml-->
+<view >
+<view class="city hor">
+<image class="dwicon" src='../../images/widget_location.png'></image>
+<view class='font'>{{city}} {{district}} {{street}}</view>
+<view class='font'></view>
+</view>
+
+<view class='temperature'>
+<text style='font-size: 60px;'>{{curtmp}}</text>
+<text class='unit'>℃</text>
+</view>
+<view class='hor '>
+<view class='weatherinfo1'>{{weather}}</view>
+<view ><image class='weathericon' src="{{pic1}}"></image></view>
+</view>
+<view class='weatherinfo'>
+{{wind}}
+</view>
+<view class='weatherinfo'>
+
+</view>
+
+ <view class='section_col'>
+ <view class='item'>
+<image class='image' src='../../images/collection_night.png' > </image>
+ <view>今日</view>
+ <view>{{curdate}}</view>
+</view>
+<view class='line'></view>
+<view class='item'>
+<image class='image' src='../../images/weather_aqi_icon_01.png' > </image>
+ <view>PM2.5</view>
+ <view>{{pm25}}</view>
+</view>
+<view class='line'></view>
+ <view class='item'>
+ <image class='image' src='../../images/collection_night.png' > </image>
+ <view>温度</view>
+ <view>{{tmp}}</view>
+ </view>
+ </view>
+
+
+<view class="w forcast_title">未来天气预报</view> 
+<view class='line2'></view>
+<view wx:for="{{forecast}}" wx:for-index="i" wx:for-item="item"> 
+<view class="hor forcast w"> 
+<view class="center width33">{{item.date}}</view> 
+<view class="hor center width33"> 
+<text>{{item.temperature}} </text> 
+</view> 
+
+<view class="hor center width33"> 
+<text> {{item.weather}} </text>
+<image class="img" src="{{item.dayPictureUrl}}"></image>
+</view> 
+
+</view> 
+</view>
+
+<view class="w forcast_title">生活指数</view> 
+<view class='line2'></view>
+<!--穿衣指数-->
+<view class="hor w"> 
+<view class="item1">
+<image class="lifeindexicon" src='../../images/weather_suggestion_drsg.png'></image>
+<view style='font-size: 15px;'>穿衣指数</view>
+</view> 
+<view class=" width76 margin_top20"> 
+<view class='font18'>{{drsg_zs}}</view>
+<view class='font15'>{{drsg_des}}</view>
+</view> 
+</view> 
+<!--洗车指数-->
+<view class="hor w"> 
+<view class="item1">
+<image class="lifeindexicon" src='../../images/weather_suggestion_cw.png'></image>
+<view style='font-size: 15px;'>洗车指数</view>
+</view> 
+<view class=" width76 margin_top20"> 
+<view class='font18'>{{cw_zs}}</view>
+<view class='font15'>{{cw_des}}</view>
+</view> 
+</view> 
+<!--感冒指数-->
+<view class="hor w"> 
+<view class="item1">
+<image class="lifeindexicon" src='../../images/weather_suggestion_flu.png'></image>
+<view style='font-size: 15px;'>感冒指数</view>
+</view> 
+<view class=" width76 margin_top20"> 
+<view class='font18'>{{flu_zs}}</view>
+<view class='font15'>{{flu_des}}</view>
+</view> 
+</view> 
+<!--运动指数-->
+<view class="hor w"> 
+<view class="item1">
+<image class="lifeindexicon" src='../../images/weather_suggestion_sport.png'></image>
+<view style='font-size: 15px;'>运动指数</view>
+</view> 
+<view class=" width76 margin_top20"> 
+<view class='font18'>{{sport_zs}}</view>
+<view class='font15'>{{sport_des}}</view>
+</view> 
+</view> 
+<!--紫外线指数-->
+<view class="hor w"> 
+<view class="item1">
+<image class="lifeindexicon" src='../../images/weather_suggestion_uv.png'></image>
+<view style='font-size: 15px;'>紫外线指数</view>
+</view> 
+<view class=" width76 margin_top20"> 
+<view class='font18'>{{uv_zs}}</view>
+<view class='font15'>{{uv_des}}</view>
+</view> 
+</view> 
+<view class='end'>©copyright pkufenghao.top</view>
+</view>
+
